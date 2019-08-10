@@ -19,16 +19,24 @@ repositories {
 	mavenCentral()
 }
 
+ext.versions = [
+   springboot: '2.1.7.RELEASE',
+   lombok: '1.18.8',
+   mockito: '2.28.2'
+]
+
 dependencies {
 	// Dependencies
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.1.7.RELEASE'
-	implementation 'org.springframework.boot:spring-boot-starter-web:2.1.7.RELEASE'
+	implementation "org.springframework.boot:spring-boot-starter-thymeleaf:${versions.springboot}"
+	implementation "org.springframework.boot:spring-boot-starter-web:${versions.springboot}"
+	implementation "org.springframework.boot:spring-boot-starter-actuator:${versions.springboot}"
+	implementation "org.springframework.boot:spring-boot-starter-security:${versions.springboot}"
 	
 	// Lombok
-	compileOnly 'org.projectlombok:lombok:1.18.8'
-	annotationProcessor 'org.projectlombok:lombok:1.18.8'
+	compileOnly "org.projectlombok:lombok:${versions.lombok}"
+	annotationProcessor "org.projectlombok:lombok:${versions.lombok}"
 	
 	// Testing
-	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.1.7.RELEASE'
-	testImplementation 'org.mockito:mockito-core:2.28.2'
+	testImplementation "org.springframework.boot:spring-boot-starter-test:${versions.springboot}"
+	testImplementation "org.mockito:mockito-core:${versions.mockito}"
 }
