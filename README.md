@@ -1,6 +1,7 @@
 # simple-boot
 
 simple-boot is a gradle project meant to illustrate a basic Spring Boot setup.  Some of what's illustrated:
+* Gradle build process
 * Thymeleaf template endpoints
 * JSON based API endpoints
 * Logback logging
