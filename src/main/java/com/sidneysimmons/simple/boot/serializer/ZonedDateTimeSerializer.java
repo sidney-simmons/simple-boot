@@ -8,6 +8,12 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Serializer for standard {@link ZonedDateTime} objects. This serializer will make sure the
+ * date/time is in UTC and then format via ISO format.
+ * 
+ * @author Sidney Simmons
+ */
 public class ZonedDateTimeSerializer extends JsonSerializer<ZonedDateTime> {
 
 	private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ISO_OFFSET_DATE_TIME;

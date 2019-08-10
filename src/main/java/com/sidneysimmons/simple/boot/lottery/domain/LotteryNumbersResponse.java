@@ -5,6 +5,11 @@ import com.sidneysimmons.simple.boot.serializer.ZonedDateTimeSerializer;
 import java.time.ZonedDateTime;
 import lombok.Data;
 
+/**
+ * Lottery numbers response object.
+ * 
+ * @author Sidney Simmons
+ */
 @Data
 public class LotteryNumbersResponse {
 

@@ -2,6 +2,11 @@ package com.sidneysimmons.simple.boot.lottery.domain;
 
 import lombok.Data;
 
+/**
+ * Lottery numbers object.
+ * 
+ * @author Sidney Simmons
+ */
 @Data
 public class LotteryNumbers {
 

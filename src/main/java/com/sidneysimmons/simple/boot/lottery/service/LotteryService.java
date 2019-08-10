@@ -6,12 +6,23 @@ import java.security.SecureRandom;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+/**
+ * Lottery service.
+ * 
+ * @author Sidney Simmons
+ */
 @Service("lotteryService")
 public class LotteryService {
 
 	@Value("${lottery.numbers.upper-limit}")
 	private Integer upperLimit;
 
+	/**
+	 * Create a fresh set of lottery numbers. Uses the upper limit defined via {@link #upperLimit} to
+	 * confine the possible numbers.
+	 * 
+	 * @return the fresh set of lottery numbers
+	 */
 	public LotteryNumbers createNumbers() {
 		// Create a random integer generator
 		SecureRandom random;
