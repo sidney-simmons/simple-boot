@@ -10,7 +10,7 @@ simple-boot is a gradle project meant to illustrate a basic Spring Boot setup.  
 
 ## Usage
 
-Clone the repository and execute the following:
+Clone the repository and execute the following.  Runs on port 8000.
 
 ```
 gradlew bootRun
