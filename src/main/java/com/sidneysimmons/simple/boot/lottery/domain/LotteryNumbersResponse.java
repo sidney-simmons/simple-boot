@@ -13,9 +13,9 @@ import lombok.Data;
 @Data
 public class LotteryNumbersResponse {
 
-	private LotteryNumbers lotteryNumbers;
+    private LotteryNumbers lotteryNumbers;
 
-	@JsonSerialize(using = ZonedDateTimeSerializer.class)
-	private ZonedDateTime creationTime;
+    @JsonSerialize(using = ZonedDateTimeSerializer.class)
+    private ZonedDateTime creationTime;
 
 }

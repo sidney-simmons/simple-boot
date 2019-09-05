@@ -26,58 +26,58 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-	@Autowired
-	private Environment environment;
+    @Autowired
+    private Environment environment;
 
-	private static final String ACTUATOR_ROLE = "ACTUATOR";
+    private static final String ACTUATOR_ROLE = "ACTUATOR";
 
-	/**
-	 * The /actuator/* endpoints require a specific role. All other endpoints don't require
-	 * authentication. All CSRF is disabled.
-	 */
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/actuator/*").hasRole(ACTUATOR_ROLE).anyRequest().permitAll().and()
-				.httpBasic().and().csrf().disable();
-	}
+    /**
+     * The /actuator/* endpoints require a specific role. All other endpoints don't require
+     * authentication. All CSRF is disabled.
+     */
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests().antMatchers("/actuator/*").hasRole(ACTUATOR_ROLE).anyRequest().permitAll().and()
+                .httpBasic().and().csrf().disable();
+    }
 
-	/**
-	 * Use BCrypt as the password encoder.
-	 * 
-	 * @return the password encoder
-	 */
-	@Bean
-	public BCryptPasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
+    /**
+     * Use BCrypt as the password encoder.
+     * 
+     * @return the password encoder
+     */
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
-	/**
-	 * Setup a user details service with a predefined collection of users.
-	 */
-	@Bean
-	@Override
-	public UserDetailsService userDetailsService() {
-		return new InMemoryUserDetailsManager(buildUsers());
-	}
+    /**
+     * Setup a user details service with a predefined collection of users.
+     */
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        return new InMemoryUserDetailsManager(buildUsers());
+    }
 
-	/**
-	 * Build a collection of users and roles.
-	 * 
-	 * @return a collection of users and roles
-	 */
-	private Collection<UserDetails> buildUsers() {
-		// Actuator user
-		String actuatorUsername = environment.getProperty("user.actuator.username");
-		String actuatorPassword = environment.getProperty("user.actuator.password");
-		String actuatorRole = environment.getProperty("user.actuator.role");
-		Collection<GrantedAuthority> actuatorAuthorities = new ArrayList<>();
-		actuatorAuthorities.add(new SimpleGrantedAuthority("ROLE_" + actuatorRole));
-		UserDetails user = new User(actuatorUsername, actuatorPassword, actuatorAuthorities);
+    /**
+     * Build a collection of users and roles.
+     * 
+     * @return a collection of users and roles
+     */
+    private Collection<UserDetails> buildUsers() {
+        // Actuator user
+        String actuatorUsername = environment.getProperty("user.actuator.username");
+        String actuatorPassword = environment.getProperty("user.actuator.password");
+        String actuatorRole = environment.getProperty("user.actuator.role");
+        Collection<GrantedAuthority> actuatorAuthorities = new ArrayList<>();
+        actuatorAuthorities.add(new SimpleGrantedAuthority("ROLE_" + actuatorRole));
+        UserDetails user = new User(actuatorUsername, actuatorPassword, actuatorAuthorities);
 
-		// Return all the users
-		Collection<UserDetails> userDetails = new ArrayList<>();
-		userDetails.add(user);
-		return userDetails;
-	}
+        // Return all the users
+        Collection<UserDetails> userDetails = new ArrayList<>();
+        userDetails.add(user);
+        return userDetails;
+    }
 
 }

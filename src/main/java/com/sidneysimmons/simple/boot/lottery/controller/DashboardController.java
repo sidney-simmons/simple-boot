@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "/dashboard")
 public class DashboardController {
 
-	/**
-	 * Return the dashboard page.
-	 * 
-	 * @return the dashboard page
-	 */
-	@GetMapping(value = "")
-	public String createNumbers() {
-		return ViewNames.DASHBOARD;
-	}
+    /**
+     * Return the dashboard page.
+     * 
+     * @return the dashboard page
+     */
+    @GetMapping(value = "")
+    public String createNumbers() {
+        return ViewNames.DASHBOARD;
+    }
 
 }
