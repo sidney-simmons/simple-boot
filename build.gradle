@@ -2,12 +2,12 @@ plugins {
 	id 'org.springframework.boot' version '2.1.7.RELEASE'
 	id 'java'
 }
-
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.sidneysimmons.simple.boot'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '12'
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 configurations {
 	compileOnly {
