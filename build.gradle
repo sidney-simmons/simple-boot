@@ -1,6 +1,6 @@
 plugins {
-	id 'org.springframework.boot' version '2.1.7.RELEASE'
-	id 'java'
+    id 'org.springframework.boot' version '2.1.7.RELEASE'
+    id 'java'
 }
 apply plugin: 'io.spring.dependency-management'
 
@@ -10,27 +10,27 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	// Dependencies
-	implementation "org.springframework.boot:spring-boot-starter-thymeleaf:2.1.7.RELEASE"
-	implementation "org.springframework.boot:spring-boot-starter-web:2.1.7.RELEASE"
-	implementation "org.springframework.boot:spring-boot-starter-actuator:2.1.7.RELEASE"
-	implementation "org.springframework.boot:spring-boot-starter-security:2.1.7.RELEASE"
-	
-	// Lombok
-	compileOnly "org.projectlombok:lombok:1.18.8"
-	annotationProcessor "org.projectlombok:lombok:1.18.8"
-	
-	// Testing
-	testImplementation "org.springframework.boot:spring-boot-starter-test:2.1.7.RELEASE"
-	testImplementation "org.mockito:mockito-core:2.28.2"
+    // Dependencies
+    implementation "org.springframework.boot:spring-boot-starter-thymeleaf:2.1.7.RELEASE"
+    implementation "org.springframework.boot:spring-boot-starter-web:2.1.7.RELEASE"
+    implementation "org.springframework.boot:spring-boot-starter-actuator:2.1.7.RELEASE"
+    implementation "org.springframework.boot:spring-boot-starter-security:2.1.7.RELEASE"
+    
+    // Lombok
+    compileOnly "org.projectlombok:lombok:1.18.8"
+    annotationProcessor "org.projectlombok:lombok:1.18.8"
+    
+    // Testing
+    testImplementation "org.springframework.boot:spring-boot-starter-test:2.1.7.RELEASE"
+    testImplementation "org.mockito:mockito-core:2.28.2"
 }

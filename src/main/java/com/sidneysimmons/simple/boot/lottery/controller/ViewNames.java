@@ -7,10 +7,10 @@ package com.sidneysimmons.simple.boot.lottery.controller;
  */
 public class ViewNames {
 
-	public static final String DASHBOARD = "dashboard";
+    public static final String DASHBOARD = "dashboard";
 
-	private ViewNames() {
-		// No need to instantiate this class
-	}
+    private ViewNames() {
+        // No need to instantiate this class
+    }
 
 }

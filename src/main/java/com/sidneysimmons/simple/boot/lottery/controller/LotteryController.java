@@ -18,20 +18,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/lottery", produces = MediaType.APPLICATION_JSON_VALUE)
 public class LotteryController {
 
-	@Resource(name = "lotteryService")
-	private LotteryService lotteryService;
+    @Resource(name = "lotteryService")
+    private LotteryService lotteryService;
 
-	/**
-	 * Build and return a new set of lottery numbers.
-	 * 
-	 * @return the newly created lottery numbers
-	 */
-	@GetMapping(value = "/create-numbers")
-	public LotteryNumbersResponse createNumbers() {
-		LotteryNumbersResponse response = new LotteryNumbersResponse();
-		response.setLotteryNumbers(lotteryService.createNumbers());
-		response.setCreationTime(ZonedDateTime.now());
-		return response;
-	}
+    /**
+     * Build and return a new set of lottery numbers.
+     * 
+     * @return the newly created lottery numbers
+     */
+    @GetMapping(value = "/create-numbers")
+    public LotteryNumbersResponse createNumbers() {
+        LotteryNumbersResponse response = new LotteryNumbersResponse();
+        response.setLotteryNumbers(lotteryService.createNumbers());
+        response.setCreationTime(ZonedDateTime.now());
+        return response;
+    }
 
 }
