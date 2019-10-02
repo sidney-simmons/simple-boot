@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "70dd0d2b-89d7-438f-a020-bba1525f487c",
+		"name": "Simple Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Lottery Numbers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/lottery/create-numbers",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lottery",
+						"create-numbers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator: Health",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "actuator-user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/actuator/health",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator: Shutdown",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "actuator-user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/actuator/shutdown",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"actuator",
+						"shutdown"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
