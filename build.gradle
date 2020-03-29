@@ -15,16 +15,16 @@ repositories {
 
 dependencies {
     // Dependencies
-    implementation "org.springframework.boot:spring-boot-starter-thymeleaf:2.1.7.RELEASE"
-    implementation "org.springframework.boot:spring-boot-starter-web:2.1.7.RELEASE"
-    implementation "org.springframework.boot:spring-boot-starter-actuator:2.1.7.RELEASE"
-    implementation "org.springframework.boot:spring-boot-starter-security:2.1.7.RELEASE"
+    implementation "org.springframework.boot:spring-boot-starter-thymeleaf:2.2.6.RELEASE"
+    implementation "org.springframework.boot:spring-boot-starter-web:2.2.6.RELEASE"
+    implementation "org.springframework.boot:spring-boot-starter-actuator:2.2.6.RELEASE"
+    implementation "org.springframework.boot:spring-boot-starter-security:2.2.6.RELEASE"
     
     // Lombok
     compileOnly "org.projectlombok:lombok:1.18.8"
     annotationProcessor "org.projectlombok:lombok:1.18.8"
     
     // Testing
-    testImplementation "org.springframework.boot:spring-boot-starter-test:2.1.7.RELEASE"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:2.2.6.RELEASE"
     testImplementation "org.mockito:mockito-core:2.28.2"
 }
