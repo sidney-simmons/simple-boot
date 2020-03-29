@@ -14,7 +14,7 @@ simple-boot is a gradle project meant to illustrate a basic Spring Boot setup.  
 Clone the repository and execute the following.  Runs on port 8000.
 
 ```
-gradlew bootRun
+./gradlew bootRun
 ```
 
 Hit some of the application endpoints by importing the Postman collection in the `postman-collection.json` file.
