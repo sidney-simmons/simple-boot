@@ -19,7 +19,7 @@ public class DashboardController {
      * @return the dashboard page
      */
     @GetMapping(value = "")
-    public String createNumbers() {
+    public String getDashboard() {
         return ViewNames.DASHBOARD;
     }
 
