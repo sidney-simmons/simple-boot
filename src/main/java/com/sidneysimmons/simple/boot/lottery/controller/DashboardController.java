@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Sidney Simmons
  */
 @Controller
-@RequestMapping(value = "/dashboard")
+@RequestMapping(value = "")
 public class DashboardController {
 
     /**
