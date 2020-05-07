@@ -2,6 +2,8 @@ package com.sidneysimmons.simple.boot.lottery.controller;
 
 import com.sidneysimmons.simple.boot.lottery.domain.LotteryNumbersResponse;
 import com.sidneysimmons.simple.boot.lottery.service.LotteryService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import java.time.ZonedDateTime;
 import javax.annotation.Resource;
 import org.springframework.http.MediaType;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 
  * @author Sidney Simmons
  */
+@Api
 @RestController
 @RequestMapping(value = "/lottery", produces = MediaType.APPLICATION_JSON_VALUE)
 public class LotteryController {
@@ -26,6 +29,7 @@ public class LotteryController {
      * 
      * @return the newly created lottery numbers
      */
+    @ApiOperation(value = "Create a random set of lottery numbers.")
     @GetMapping(value = "/create-numbers")
     public LotteryNumbersResponse createNumbers() {
         LotteryNumbersResponse response = new LotteryNumbersResponse();
