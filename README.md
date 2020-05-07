@@ -12,13 +12,13 @@ simple-boot is a gradle project meant to illustrate a basic Spring Boot setup.  
 
 ## Usage
 
-Clone the repository and execute the following.  Runs on port 8000.
+Clone the repository and execute the following.  Runs on port 8080.
 
 ```
 ./gradlew bootRun
 ```
 
-Hit some of the application endpoints by importing the Postman collection in the `postman-collection.json` file.  Check out the swagger documentation [here](http://localhost:8000/swagger-ui.html).
+Hit some of the application endpoints by importing the Postman collection in the `postman-collection.json` file.  Check out the swagger documentation [here](http://localhost:8080/swagger-ui.html).
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
